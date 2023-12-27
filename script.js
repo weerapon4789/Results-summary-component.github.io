@@ -46,16 +46,3 @@ function appendData(data) {
        
     }
 }
-
-/*
-<div class="cate_category cate_category--red">
-<div class="category_heading">
-  <img src="./assets/images/icon-reaction.svg" alt="reaction icon" />
-  <p id="title_text">Reaction</p>
-</div>
-<div class="category_score">
-  <span>80</span>
-  <span>/</span>
-  <span>100</span>
-</div>
-</div> */
