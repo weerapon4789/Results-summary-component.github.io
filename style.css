@@ -144,7 +144,6 @@ p {
 .category_score {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
     color: #303b59;
     font-weight: 700;
 }
@@ -270,11 +269,6 @@ p {
         margin-top: 2.5rem;
         margin-bottom: 3.5rem;
     }
-
-    .summary_cate > * + * {
-        margin-top: 1.5rem;
-        font-size: 1.8rem;
-      }
 
     .btn_continue {
         font-size: 1.6rem;

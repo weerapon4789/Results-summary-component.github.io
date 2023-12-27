@@ -8,10 +8,54 @@ fetch('/data.json')
 });
 
 function appendData(data) {
-    var mainContainer = document.getElementById("iSumarry");
+    
+    var mainContainer = document.getElementById("iSumary");
+
     for (var i = 0; i < data.length; i++) {
-        var div = document.createElement("div");
-        div.innerHTML = `${data[i].category}` ;
-        mainContainer.appendChild(div);
+        var divCate = document.createElement("div");
+        var divCate_head = document.createElement("div");
+        var img = document.createElement("img");
+        var pTitle = document.createElement("p");
+        var divScore = document.createElement("div");
+        var spanScore = document.createElement("span");
+        var spanScore2 = document.createElement("span");
+
+        divCate.classList.add("cate_category");
+        divCate.classList.add(data[i].class);
+
+        divCate_head.classList.add("category_heading");
+
+        pTitle.innerHTML = `${data[i].category}`;
+
+        img.src = `${data[i].icon}`;
+        img.alt = `${data[i].alt}`
+
+        divScore.classList.add("category_score");
+
+        spanScore.innerHTML = `${data[i].score} / `;
+        spanScore2.innerHTML = `100`;
+        
+        mainContainer.appendChild(divCate);
+        divCate.appendChild(divCate_head);
+        divCate_head.appendChild(img);
+        divCate_head.appendChild(pTitle);
+        divCate.appendChild(divScore);
+        divScore.appendChild(spanScore);
+        divScore.appendChild(spanScore2);
+        
+       
     }
 }
+
+/*
+<div class="cate_category cate_category--red">
+<div class="category_heading">
+  <img src="./assets/images/icon-reaction.svg" alt="reaction icon" />
+  <p id="title_text">Reaction</p>
+</div>
+<div class="category_score">
+  <span>80</span>
+  <span>/</span>
+  <span>100</span>
+</div>
+</div> */
