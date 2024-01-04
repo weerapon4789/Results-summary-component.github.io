@@ -1,4 +1,4 @@
-fetch('../data.json')
+fetch('https://github.com/weerapon4789/Results-summary-component.github.io/blob/main/data.json')
 .then(res => res.json())
 .then(data => {
     appendData(data)
